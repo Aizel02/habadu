@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB; /* Blue background */
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.question-container h1 {
+    font-size: 100px;
+    color:#000;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.yes-btn, .no-btn {
+    padding: 15px 30px;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff4d88;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.yes-btn:hover {
+    background-color: #ff3366;
+}
+
+.no-btn {
+    background-color: #666666;
+}
+
+.no-btn:hover {
+    background-color: #555555;
+}
+
+.greeting-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#birthdayVideo {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+/* Confetti styles */
+.confetti-background .confetti {
+    position: absolute;
+    top: -10px;
+    width: 15px;
+    height: 40px;
+    background-color: red; /* Default color */
+    border-radius: 40%;
+    animation: fall 4s linear infinite;
+}
+
+.confetti:nth-child(1) { left: 10%; background-color: red; }
+.confetti:nth-child(2) { left: 20%; background-color: orange; animation-duration: 3s; }
+.confetti:nth-child(3) { left: 30%; background-color: yellow; animation-duration: 4s; }
+.confetti:nth-child(4) { left: 40%; background-color: green; animation-duration: 5s; }
+.confetti:nth-child(5) { left: 50%; background-color: blue; animation-duration: 3.5s; }
+.confetti:nth-child(6) { left: 60%; background-color: indigo; animation-duration: 4.5s; }
+.confetti:nth-child(7) { left: 70%; background-color: violet; animation-duration: 3.8s; }
+.confetti:nth-child(8) { left: 80%; background-color: red; animation-duration: 4.2s; }
+.confetti:nth-child(9) { left: 90%; background-color: orange; animation-duration: 4.7s; }
+
+/* Confetti fall animation */
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HAPPY BIRTHDAY</title>
+</head>
+<body>
+    
+    <div class="container question-container">  
+        <h1>Is it your birthday today?</h1>
+        <div class="buttons">
+            <button class="yes-btn" onclick="showGreetings()">Yes</button>
+            <button class="no-btn">No</button>
+        </div>
+    </div>
+
+    <div class="container greeting-container">
+        <div class="confetti-container">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+        </div>
+        <div class="video-container">
+            <video id="birthdayVideo" src="video/860a79f8-66ad-4238-bf61-9813e300697b.mp4" controls></video>
+        </div>
+    </div>
+
+    <script>
+        function showGreetings() {
+            // Hide the question and show the greetings section
+            document.querySelector('.question-container').style.display = 'none';
+            document.querySelector('.greeting-container').style.display = 'flex';
+            document.body.classList.add('confetti-background');
+
+            // Play the video automatically
+            const video = document.getElementById('birthdayVideo');
+            document.querySelector('.video-container').style.display = 'flex';
+            video.play();
+        }
+    </script>
+</body>
+</html>
